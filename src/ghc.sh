@@ -521,8 +521,8 @@ symlink_ghc_x86_64_libs () {
 		fi
 		;;
 	'linux-exherbo'*|'linux-gentoo'*)
-		gmp_file='/usr/lib64/libgmp.so.10'
-		tinfo_file='/lib64/libncurses.so.5'
+		gmp_file='/usr/host/lib/libgmp.so.10'
+		tinfo_file='/usr/host/lib/libncurses.so.5'
 		if (( ghc_major < 7 || ghc_minor < 8 )); then
 			gmp_name='libgmp.so.3'
 			url=$( map_ghc_version_to_gmp4_linux_x86_64_url "${ghc_version}" ) || return 1
